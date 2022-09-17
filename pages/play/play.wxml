@@ -1,0 +1,32 @@
+<view class="content">
+  <image class="big-img" src="{{song.album.picUrl}}"></image>
+  <view class="title">{{song.name}}</view>
+  <view class="title-s">{{song.album.name}}</view>
+
+  <view class="middle">
+    <swiper class="middle-swiper">
+      <swiper-item class="cd-swiper">
+        <view class="cd-image">
+          <image style="animation-play-state: {{state=='play'?'running':'paused'}};" src="{{song.album.picUrl}}"></image>
+        </view>
+      </swiper-item>
+      <swiper-item>
+
+        <!-- 歌词滚动区域 -->
+        <scroll-view class="lyric-wraper" scroll-y>
+        <block wx:for="{{geciArray}}" wx:for-item='lyric' wx:for-index="index">
+        <text class="{{cunrrentIndex == index?'currentLyric':''}}">{{lyric[1]}}</text>
+        </block>
+        <text>    ..</text>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+    <view class="controls">
+      <image src="/images/prev.png"></image>
+      <image class="ct" src="/images/{{state=='play'?'pause':'play'}}.png" bindtap="playOrPause"></image>
+      <image src="/images/next.png"></image>
+    </view>
+  </view>
+</view>
+<!-- 播放音频 -->
+<audio action="{{action}}" loop="true" src="http://music.163.com/song/media/outer/url?id={{id}}.mp3"></audio>

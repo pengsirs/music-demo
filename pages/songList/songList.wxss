@@ -1,0 +1,53 @@
+/* pages/songList/songList.wxss */
+.imageContainer{
+  width: 100%;
+  height: 300rpx;
+}
+.imageContainer image{
+  width: 100%;
+  height: 100%;
+  margin: 0px 3px;
+}
+.musicContainer{
+  width: 98%;
+  height: 150rpx;
+  background-color: #eee;
+  margin-top: 10rpx;
+  display: flex;
+  margin: 10rpx auto;
+  border-radius: 10px;
+}
+.left{
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #eee;
+}
+.right image,
+.left image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10px;
+  margin: 5rpx;
+}
+.center{
+  width: 450rpx;
+  height: 150rpx;
+  background-color: #eee;
+}
+.title{
+  color: #000;
+  font-size: 45rpx;
+  font-weight: 800;
+  padding: 20rpx 30rpx;  width: 450rpx;
+  overflow:hidden;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+}
+.singerName{
+  color: #000;
+  padding: 0rpx 30rpx;
+}
+.right{
+  width: 150rpx;
+  height: 150rpx;
+}

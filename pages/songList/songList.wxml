@@ -1,0 +1,21 @@
+<!-- 轮播图 -->
+<swiper previous-margin="10px" next-margin="10px" circular indicator-dots indicator-color="red" autoplay interval="1000" class="imageContainer">
+  <swiper-item wx:for="{{imgList}}">
+    <image src="{{item}}" />
+  </swiper-item>
+</swiper>
+<!-- 歌曲列表 -->
+<block wx:for="{{songList}}">
+  <view class="musicContainer">
+    <view class="left">
+      <image src="{{item.img}}" />
+    </view>
+    <view class="center">
+      <view class="title">{{item.name}}</view>
+      <view class="singerName">{{item.singer}}</view>
+    </view>
+    <view class="right">
+      <image bindtap="goToPlay" data-id="{{item.id}}" data-img="{{item.img}}" data-name="{{item.name}}" data-singer="{{item.singer}}" src="/images/play.png" />
+    </view>
+  </view>
+</block>
